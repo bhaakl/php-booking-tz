@@ -10,7 +10,7 @@ class AssetBookingsRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'id' => ['required', 'int', Rule::exists('assets', 'id')],
+            'id' => ['required', 'int'],
         ];
     }
 
@@ -20,5 +20,4 @@ class AssetBookingsRequest extends FormRequest
             'id' => $this->route('id'),
         ]);
     }
-
 }

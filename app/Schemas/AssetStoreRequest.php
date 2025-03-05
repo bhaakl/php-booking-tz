@@ -2,7 +2,6 @@
 
 namespace App\Schemas;
 
-
 /**
  * @OA\Schema(
  *     description="Description",

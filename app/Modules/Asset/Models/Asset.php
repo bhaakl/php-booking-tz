@@ -3,6 +3,8 @@
 namespace App\Modules\Asset\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use App\Modules\Booking\Models\Booking;
 
 /**
@@ -19,9 +21,11 @@ use App\Modules\Booking\Models\Booking;
  */
 class Asset extends Model
 {
+    use HasFactory;
+
     protected $fillable = ['name', 'type', 'description'];
 
-    public function bookings()
+    public function bookings(): HasMany
     {
         return $this->hasMany(Booking::class);
     }

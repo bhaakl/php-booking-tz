@@ -2,7 +2,6 @@
 
 namespace App\Schemas;
 
-
 /**
  * @OA\Schema(
  *     description="Success",
@@ -24,6 +23,4 @@ class SuccessResponse
      * @var array $data
      */
     public array $data;
-
-
 }

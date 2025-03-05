@@ -3,6 +3,7 @@
 namespace App\Modules\Booking\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Carbon\Carbon;
 
 /**
@@ -19,13 +20,20 @@ use Carbon\Carbon;
  */
 class Booking extends Model
 {
+    use HasFactory;
+
     protected $fillable = ['asset_id', 'user_id', 'start_time', 'end_time'];
 
     protected $dates = ['start_time', 'end_time'];
 
     public function asset()
     {
-        return $this->belongsTo(Asset::class);
+        return $this->belongsTo(\App\Modules\Asset\Models\Asset::class)->withDefault();
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(\App\Models\User::class);
     }
 
     public function getStartTimeAttribute($value)
@@ -53,4 +61,3 @@ class Booking extends Model
         return $this->start_time->diffInMinutes($this->end_time);
     }
 }
-

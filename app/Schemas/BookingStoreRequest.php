@@ -2,7 +2,6 @@
 
 namespace App\Schemas;
 
-
 /**
  * @OA\Schema(
  *     description="Booking request",
@@ -25,16 +24,16 @@ class BookingStoreRequest
      * @var string $user_id
      */
     public string $user_id;
-    
+
     /**
-     * @OA\Property(property="start_time", type="date", example="2025-02-22T09:14:48.000000", description="start booking time")
+     * @OA\Property(property="start_time", type="date", example="2025-03-08 19:08:50", description="start booking time")
      *
      * @var string $start_time
      */
     public string $start_time;
 
     /**
-     * @OA\Property(property="end_time", type="date", example="2025-02-22T09:14:48.000000", description="end booking time")
+     * @OA\Property(property="end_time", type="date", example="2025-03-08 19:08:50", description="end booking time")
      *
      * @var string $end_time
      */

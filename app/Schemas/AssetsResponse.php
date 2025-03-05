@@ -2,7 +2,6 @@
 
 namespace App\Schemas;
 
-
 /**
  * @OA\Schema(
  *     description="Asset Response",
@@ -22,5 +21,4 @@ class AssetsResponse
      * @var array $data
      */
     public array $data;
-
 }

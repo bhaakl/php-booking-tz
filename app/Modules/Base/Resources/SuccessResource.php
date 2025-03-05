@@ -2,7 +2,6 @@
 
 namespace App\Modules\Base\Resources;
 
-
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class SuccessResource extends JsonResource
@@ -26,5 +25,10 @@ class SuccessResource extends JsonResource
     public function withResponse($request, $response): void
     {
         $response->setStatusCode($this->status);
+    }
+
+    public function getStatusCode(): int
+    {
+        return $this->status;
     }
 }

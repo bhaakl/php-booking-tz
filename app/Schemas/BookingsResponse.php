@@ -2,7 +2,6 @@
 
 namespace App\Schemas;
 
-
 /**
  * @OA\Schema(
  *     description="Asset Bookings response",
@@ -22,5 +21,4 @@ class BookingsResponse
      * @var array $data
      */
     public array $data;
-
 }

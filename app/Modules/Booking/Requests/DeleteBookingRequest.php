@@ -10,7 +10,7 @@ class DeleteBookingRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'id' => ['required', 'int', Rule::exists('bookings', 'id')],
+            'id' => ['required', 'int'],
         ];
     }
 
@@ -20,5 +20,4 @@ class DeleteBookingRequest extends FormRequest
             'id' => $this->route('id'),
         ]);
     }
-
 }
